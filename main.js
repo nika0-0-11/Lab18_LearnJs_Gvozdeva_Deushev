@@ -113,21 +113,51 @@
 // console.log(persons);
 // persons = {name: "Nika"}; // Error!
 
-console.log( typeof "text"); // string
-console.log( typeof 812); // number
-console.log( typeof true); // boolean
-console.log( typeof undefined); // undefined
-console.log( typeof null); // !!! object
-console.log( typeof {}); // object
-console.log( typeof []); // object
-console.log( typeof function () {}); // function
+// console.log( typeof "text"); // string
+// console.log( typeof 812); // number
+// console.log( typeof true); // boolean
+// console.log( typeof undefined); // undefined
+// console.log( typeof null); // !!! object
+// console.log( typeof {}); // object
+// console.log( typeof []); // object
+// console.log( typeof function () {}); // function
 
-let numberX = null;
-console.log(numberX === null);
+// let numberX = null;
+// console.log(numberX === null);
 
-// Практическое задание
+// // Практическое задание
 
-let newPrice = 812;
-console.log(newPrice, typeof newPrice);
-newPrice = "Text";
-console.log(newPrice, typeof newPrice);
+// let newPrice = 812;
+// console.log(newPrice, typeof newPrice);
+// newPrice = "Text";
+// console.log(newPrice, typeof newPrice);
+
+// Явное преобразование типов:
+
+// В строку
+let num = 812; 
+let str = String(num); // "812"
+let str2 = num.toString(); // "812"
+let str3 = "" + num; // "812"
+
+// В число
+let strNum = "812"; // 812
+let int = Number(strNum); // 812
+let int2 = parseInt("812.5"); // 812
+let float = parseFloat("3.14"); // 3.14
+let int3 = +"812"; // 812
+
+// В булево значение
+let bool1 = Boolean(1); // true
+let bool2 = !!1; // true
+let bool3 = Boolean(0); // false
+let bool4 = Boolean(""); // false
+
+// Неявное преобразование (coercion):
+console.log("5" + 3); // "53" (конкатенация)
+console.log("5" - 3); // 2 (преобразование в число)
+console.log("5" * "2"); // 10
+console.log(true + 1); //  2
+console.log(false + 1); // 1
+console.log(null  + 1); // 1
+console.log(undefined + 1); // NaN

@@ -15,100 +15,119 @@
 
 // 1. Примитивные (primitive) типы
 
-let userName = "Тимур";
-// шаблон строка
-console.log(`Привет, ${userName}!`);
-// дробное число
-let price = 99.99;
-// отриц число
-let temperature = -15;
-// Infinity 
-let infinity = 1 / 0;
-// NaN (Not a Number)
-let notANumber = 0 / 0;
-// 0.30000000000000004 (особенность JS)
-console.log(0.1 + 0.2);
-// BigInt (Большие целые числа)
-let bigNum = 9007199254740991n;
-let huge = BigInit("12345678012345678901234567890");
-// Boolean (Логический тип)
-let isAlive = true;
-let isWorking = false;
-let isAdult = age >= 18;
-// Undefined (Не определено)
-let x;
-let y = undefined; 
-// Null (Пустое значение)
-let userData = null;
+// let userName = "Тимур";
+// // шаблон строка
+// console.log(`Привет, ${userName}!`);
+// // дробное число
+// let price = 99.99;
+// // отриц число
+// let temperature = -15;
+// // Infinity 
+// let infinity = 1 / 0;
+// // NaN (Not a Number)
+// let notANumber = 0 / 0;
+// // 0.30000000000000004 (особенность JS)
+// console.log(0.1 + 0.2);
+// // BigInt (Большие целые числа)
+// let bigNum = 9007199254740991n;
+// let huge = BigInit("12345678012345678901234567890");
+// // Boolean (Логический тип)
+// let isAlive = true;
+// let isWorking = false;
+// let isAdult = age >= 18;
+// // Undefined (Не определено)
+// let x;
+// let y = undefined; 
+// // Null (Пустое значение)
+// let userData = null;
 
-// 2. Объектные (object) типы
+// // 2. Объектные (object) типы
 
-// Symbol (Символ)
-let id = Symbol("id");
+// // Symbol (Символ)
+// let id = Symbol("id");
 
-// Object (Объект)
-let person = {
-    name: "Тимур",
-    age: 18,
-    isStudent: true,
-    sayHello: function () {
-        console.log("Привет!");
-    },
-};
+// // Object (Объект)
+// let person = {
+//     name: "Тимур",
+//     age: 18,
+//     isStudent: true,
+//     sayHello: function () {
+//         console.log("Привет!");
+//     },
+// };
 
-console.log(person.name);
+// console.log(person.name);
 
-// Array (Массив)
-let fruits = ["яблоко","банан", "апельсин"];
-let numbers = [1, 2, 3, 4, 5];
-let mixed = ["text", 812, true, null];
+// // Array (Массив)
+// let fruits = ["яблоко","банан", "апельсин"];
+// let numbers = [1, 2, 3, 4, 5];
+// let mixed = ["text", 812, true, null];
 
-// Function (Функция)
-function sum(a, b) {
-    return a +b;
-}
+// // Function (Функция)
+// function sum(a, b) {
+//     return a +b;
+// }
 
-let mut = function(x, y) {
-    return x * y;
-}
+// let mut = function(x, y) {
+//     return x * y;
+// }
 
-console.log(sum(5, 3));
-console.log(mut(5, 3));
+// console.log(sum(5, 3));
+// console.log(mut(5, 3));
 
-// Date (Дата)
-let now = new Date();
-let birthday = new Date("2007-07-20");
+// // Date (Дата)
+// let now = new Date();
+// let birthday = new Date("2007-07-20");
 
-// 3. Арифметические операции
+// // 3. Арифметические операции
 
-let a = 10;
-let b = 3;
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
+// let a = 10;
+// let b = 3;
+// console.log(a + b);
+// console.log(a - b);
+// console.log(a * b);
+// console.log(a / b);
 
-// Особенность JavaScript:
-console.log(10 + "5"); // "105"
-console.log("10" - 5); // 5
+// // Особенность JavaScript:
+// console.log(10 + "5"); // "105"
+// console.log("10" - 5); // 5
 
-// Константы (const)
-const PI = 3.14;
-console.log(PI);
-// PI = 3.1415 // Error
+// // Константы (const)
+// const PI = 3.14;
+// console.log(PI);
+// // PI = 3.1415 // Error
 
-// Массивы:
-const numbersArray = [1, 2, 3];
-// Можно изменять элементы:
-numbersArray[0] = 10;
-console.log(numbersArray); // [10, 2, 3]
-// Нельзя переназначать:
-numbersArray = [5, 6, 7] // Error!
+// // Массивы:
+// const numbersArray = [1, 2, 3];
+// // Можно изменять элементы:
+// numbersArray[0] = 10;
+// console.log(numbersArray); // [10, 2, 3]
+// // Нельзя переназначать:
+// numbersArray = [5, 6, 7] // Error!
 
-// Объекты:
-const persons = {name: "Timur", age: 18};
-// Можно изменять свойства:
-persons.age = 50;
-persons.city = "Volgograd";
-console.log(persons);
-persons = {name: "Nika"}; // Error!
+// // Объекты:
+// const persons = {name: "Timur", age: 18};
+// // Можно изменять свойства:
+// persons.age = 50;
+// persons.city = "Volgograd";
+// console.log(persons);
+// persons = {name: "Nika"}; // Error!
+
+console.log( typeof "text"); // string
+console.log( typeof 812); // number
+console.log( typeof true); // boolean
+console.log( typeof undefined); // undefined
+console.log( typeof null); // !!! object
+console.log( typeof {}); // object
+console.log( typeof []); // object
+console.log( typeof function () {}); // function
+
+let numberX = null;
+console.log(numberX === null);
+
+// Практическое задание
+
+let newPrice = 812;
+console.log(newPrice, typeof newPrice);
+newPrice = "Text";
+console.log(newPrice, typeof newPrice);

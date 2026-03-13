@@ -132,32 +132,55 @@
 // newPrice = "Text";
 // console.log(newPrice, typeof newPrice);
 
-// Явное преобразование типов:
+// // Явное преобразование типов:
 
-// В строку
-let num = 812; 
-let str = String(num); // "812"
-let str2 = num.toString(); // "812"
-let str3 = "" + num; // "812"
+// // В строку
+// let num = 812; 
+// let str = String(num); // "812"
+// let str2 = num.toString(); // "812"
+// let str3 = "" + num; // "812"
 
-// В число
-let strNum = "812"; // 812
-let int = Number(strNum); // 812
-let int2 = parseInt("812.5"); // 812
-let float = parseFloat("3.14"); // 3.14
-let int3 = +"812"; // 812
+// // В число
+// let strNum = "812"; // 812
+// let int = Number(strNum); // 812
+// let int2 = parseInt("812.5"); // 812
+// let float = parseFloat("3.14"); // 3.14
+// let int3 = +"812"; // 812
 
-// В булево значение
-let bool1 = Boolean(1); // true
-let bool2 = !!1; // true
-let bool3 = Boolean(0); // false
-let bool4 = Boolean(""); // false
+// // В булево значение
+// let bool1 = Boolean(1); // true
+// let bool2 = !!1; // true
+// let bool3 = Boolean(0); // false
+// let bool4 = Boolean(""); // false
 
-// Неявное преобразование (coercion):
-console.log("5" + 3); // "53" (конкатенация)
-console.log("5" - 3); // 2 (преобразование в число)
-console.log("5" * "2"); // 10
-console.log(true + 1); //  2
-console.log(false + 1); // 1
-console.log(null  + 1); // 1
-console.log(undefined + 1); // NaN
+// // Неявное преобразование (coercion):
+// console.log("5" + 3); // "53" (конкатенация)
+// console.log("5" - 3); // 2 (преобразование в число)
+// console.log("5" * "2"); // 10
+// console.log(true + 1); //  2
+// console.log(false + 1); // 1
+// console.log(null  + 1); // 1
+// console.log(undefined + 1); // NaN
+
+// Строгое и нестрогое сравнение
+
+console.log(5 == "5"); // true (нестрогое, с преобразованием)
+console.log(5 === "5"); // false (строгое, без преобразования)
+console.log(0 == false); // true
+console.log(0 === false); // false
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+
+// Объекты сравниваются по ссылке, а не по содержимому:
+let obj1 = { name: "Nika"}; 
+let obj2 = { name: "Nika"};
+
+console.log(obj1 == obj2); // false
+console.log(obj1 === obj2); // false 
+
+let obj3 = obj1; // obj3 ссылается на тот же объект
+console.log(obj1 === obj3); // true
+
+let arr1 = [1, 2, 3];
+let arr2 = [1, 2, 3];
+console.log(arr1 === arr2); // false 
